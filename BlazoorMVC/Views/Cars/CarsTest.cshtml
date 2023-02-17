@@ -1,0 +1,37 @@
+﻿@model KategoridekiUrunlerModel;
+@using BlazoorMVC.Models;
+
+@{
+    Layout = "_Layout";
+}
+<div class="alert alert-success" style="text-align:center" role="alert">@Model.UrunSayisi Adet Ürün Listelendi!!!</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+                @foreach (var item in Model.Urunsa)
+                {
+                    <a href="#" class="list-group-item ">@item</a>
+                }
+            </div>
+        </div>
+        <div class="col-md-9">
+            @foreach (var carsModel in Model.Carssa)
+            {
+                if (carsModel.RentACarSell)
+                {
+                    <div class="col-md-4 col-sm-4style"  style="width: 18rem; margin-bottom: 20px;">
+                        <img width="160px" height="100px" src="@carsModel.CarsPicture" class="img-rounded" alt="...">
+                        <div class="card-body">
+                            <h1>@carsModel.Id</h1>
+                            <h5 class="card-title">@carsModel.CarName</h5>
+                            <p>@carsModel.NumberPlatesStart @carsModel.NumberPlateMiddle @carsModel.NumberPlateEnd</p>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="/views/cars/carsTest" class="btn btn-primary btn-block">Go somewhere</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
