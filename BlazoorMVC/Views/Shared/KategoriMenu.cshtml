@@ -1,0 +1,12 @@
+﻿@using BlazoorMVC.Models;
+@model List<UrunCesidi>;
+
+@*@model List<KategoridekiUrunlerModel> ;
+*@
+
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a href="#" class="list-group-item ">@item.Name</a>
+    }
+</div>

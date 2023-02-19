@@ -23,7 +23,7 @@ namespace BlazoorMVC.Models
     public class UrunCesidi 
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string? Name { get; set; }
         public string Description { get; set; }
     }
 }

@@ -8,12 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-3">
-            <div class="list-group">
-                @foreach (var item in Model.Urunsa)
-                {
-                    <a href="#" class="list-group-item ">@item</a>
-                }
-            </div>
+            @Html.Partial("KategoriMenu",Model.Urunsa)
         </div>
         <div class="col-md-9">
             @foreach (var carsModel in Model.Carssa)
