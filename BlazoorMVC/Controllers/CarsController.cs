@@ -68,28 +68,8 @@ namespace BlazoorMVC.Controllers
             }
             };
 
-            List<UrunCesidi> urunCesids = new List<UrunCesidi>()
-            {
-                new UrunCesidi() {
-                    Id=12,
-                    Name = "C Sınıfı",
-                    Description="Orta Segment"
-                },
-                new UrunCesidi()
-                {
-                    Id=22,
-                    Name="Süper Sport",
-                    Description="Racing"
-                },     
-                new UrunCesidi()
-                {
-                    Id=32,
-                    Name="J Segmenti",
-                    Description="SUV ,CUV"
-                }
-            };
+
             KategoridekiUrunlerModel model = new KategoridekiUrunlerModel();
-            model.Urunsa = urunCesids;
             model.UrunSayisi = carsModels.Count ;
             model.Carssa = carsModels;
             
