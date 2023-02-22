@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
+
 namespace BlazoorMVC.Controllers
 {
     public class CategoryController : Controller
@@ -32,7 +33,7 @@ namespace BlazoorMVC.Controllers
                     Description="SUV ,CUV"
                 }
             };
-            return PartialView(KategoriMenu, urunCesids);
+            return PartialView(KategoriMenu);
         }
     }
 }
